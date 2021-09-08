@@ -1,3 +1,5 @@
+// A is array of coins type....B of size amount+1....B[0]=1....B[j]=1, if j%A[0]==0.....B[j]=0, if j%A[0]!=0....
+// B[j]= B[j](when j<A[i]).......B[j] = B[j] + B[j-A[i]] (when j>=A[i])
 #include <stdio.h>
 int main(){
 int N,M,A[10],i,j;
