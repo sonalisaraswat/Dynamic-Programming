@@ -33,8 +33,8 @@ def MatTrav (Row, Col, Table):
     return Table[key]                # FINAL VALUE
 
 
-N = 18
-M = 18
+N = int(input())
+M = int(input())
 Table = {}     # dict to store key (str) and value (int)
 print(MatTrav(N, M, Table))
 
