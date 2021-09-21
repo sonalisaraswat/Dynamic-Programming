@@ -15,11 +15,9 @@ def CanSum(TargetSum, Arr, Table):
         remainder = TargetSum - ele
         if CanSum ( remainder, Arr, Table ) == True:   # if any case returns true; Table set to true for that reminder
             Table[TargetSum] = True                    # and also return true for original TargetSum
-            print('true::' + str(TargetSum))
             return True
 
     Table[TargetSum] = False
-    print('false::'+str(TargetSum))
     return False
 
 
