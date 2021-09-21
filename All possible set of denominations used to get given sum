@@ -1,14 +1,21 @@
 // A is array of coins type....B of size amount+1....B[0]=1....B[j]=1, if j%A[0]==0.....B[j]=0, if j%A[0]!=0....
 // B[j]= B[j](when j<A[i]).......B[j] = B[j] + B[j-A[i]] (when j>=A[i])
+
 #include <stdio.h>
+
 int main(){
+
 int N,M,A[10],i,j;
-scanf("%d",&N);
+
+scanf("%d",&N);                         // Number of denominations/type of coins.
+
 for (i=0;i<N;i++){
-    scanf("%d",&A[i]);
+    scanf("%d",&A[i]);                 // Value of denominations/coins.
 }
-scanf("%d",&M);
-int B[M+1];
+
+scanf("%d",&M);                       // Amount wanted.
+
+int B[M+1];                           //Set Memo
 B[0] = 1;
 for(j=1;j<=M;j++){
     if(j%A[0]==0){
@@ -17,7 +24,8 @@ for(j=1;j<=M;j++){
     else{
         B[j] = 0;
     }
-}
+} 
+                                     // Update Memo
 for(i=1;i<N;i++){
     for(j=0;j<=M;j++){
         if(j>=A[i]){
@@ -25,6 +33,7 @@ for(i=1;i<N;i++){
         }
     }
 }
-printf("%d",B[M]);
+
+printf("%d",B[M]);                  //Total ways we can use given denominations to get desired amount.
 return 0;
 }
