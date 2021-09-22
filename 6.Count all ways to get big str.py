@@ -13,6 +13,7 @@ def CountStr(TargetStr, SmallStrs, Table):
 
     for strg in SmallStrs:
         if TargetStr.startswith(strg):                  # if any string is the prefix of target, remove it and check for rest of suffix
+            #SmallStr.remove(strg)         # used if we do not want to reuse the str once it is used from SmallStrs.
             suffix = TargetStr[len(strg):]
 
             ways = CountStr(suffix, SmallStrs, Table)   # CountStr return '1' or '0'(totalcount=0)
