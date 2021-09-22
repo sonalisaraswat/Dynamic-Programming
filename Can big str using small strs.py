@@ -1,3 +1,4 @@
+# Find if Target string can be formed from given small strings
 def CanStr(TargetStr, SmallStrs, Table):
 
     if TargetStr in Table:
@@ -17,7 +18,7 @@ def CanStr(TargetStr, SmallStrs, Table):
     return False
 
 
-# Start = find if Target string can be formed from given small strings
+# Start
 TargetStr = 'abcdef'
 SmallStrs = ['abc', 'de', 'ab', 'cde','f']
 Table = {}
