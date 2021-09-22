@@ -4,7 +4,7 @@ def HowSum(TargetSum, Arr, Table):
         return Table[TargetSum]
 
     if TargetSum == 0:
-        return 'a'
+        return 'possible value'
 
     if TargetSum < 0:
         return None
