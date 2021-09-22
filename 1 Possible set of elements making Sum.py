@@ -21,6 +21,6 @@ def HowSum(TargetSum, Arr, Table):
 
 
 Table = {}
-Arr = [5,4,3,7]
+Arr = [5,4,3,1]
 TargetSum = 7
-print(HowSum(TargetSum, Arr, Table))
+print(HowSum(TargetSum, Arr, Table))     # output: possible value,1,1,5
