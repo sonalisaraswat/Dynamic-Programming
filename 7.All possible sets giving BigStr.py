@@ -36,3 +36,6 @@ allPossible = []                                       # Array for storing; arra
 Table = {}                                             # For MEMO
 allCon(Target, Arr,Table)                              # Calling
 print(allPossible)                                     # all sets are placed in 2D array T
+
+# OUTPUT:
+# [['abc', 'd', 'ef'], ['a', 'bcd', 'ef']]
