@@ -4,7 +4,7 @@ def HowSum(TargetSum, Arr, Table):
         return Table[TargetSum]
 
     if TargetSum == 0:
-        return 'possible value'
+        return []
 
     if TargetSum < 0:
         return None
@@ -13,14 +13,15 @@ def HowSum(TargetSum, Arr, Table):
         remainder = TargetSum - ele
         result = HowSum(remainder, Arr, Table)
         if result is not None:
-            Table[TargetSum] = result+','+str(ele)
-            return result+','+str(ele)
+            result.append(ele)
+            Table[TargetSum] = result
+            return result
 
     Table[TargetSum] = None
     return None
 
 
 Table = {}
-Arr = [5,4,3,1]
-TargetSum = 7
-print(HowSum(TargetSum, Arr, Table))     # output: possible value,1,1,5
+Arr = [7,5,4,3]
+TargetSum = 14
+print(HowSum(TargetSum, Arr, Table))   # output: [7, 7]
